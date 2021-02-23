@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  <title>Terrain</title>
+
+  <style>
+    body,html {
+      margin: 0;
+      height: 100%;
+    }
+
+    #app, #webgl {
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="app">
+    <v-app>
+      <v-main>
+        <v-navigation-drawer app permanent>
+          <div class="pa-2">
+            <h3>Settings</h3>
+            <v-slider thumb-label v-model="form.bumpScale" min="0" max="1000" step="1">
+              <template #label>
+                Bumpscale 
+                <div style="min-width:100px">
+                  ({{form.bumpScale}})
+                </div>
+              </template>
+            </v-slider>
+          </div>
+          <!-- <v-btn @click="apply">Apply</v-btn> -->
+        </v-navigation-drawer>
+
+        <div id="webgl">
+          <!-- canvas here -->
+        </div>
+
+      </v-main>
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>

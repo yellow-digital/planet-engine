@@ -1,0 +1,14 @@
+{
+  "name": "planet-engine",
+  "version": "0.0.1",
+  "description": "Planet rendering with ThreeJs",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx browser-sync . --watch --directory",
+    "build": "npx rollup ./src/index.js --file dist/planet-engine.esm.js --format esm --name 'planet-engine'"
+  },
+  "keywords": ["webgl", "threejs", "earth"],
+  "author": "Jelle",
+  "license": "ISC",
+  "homepage": "https://github.com/tracks-earth/planet-engine"
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  <title>Controls</title>
+
+  <style>
+    body,html {
+      margin: 0;
+      height: 100%;
+      color: white;
+    }
+
+    #app, .scene {
+      height: 100%;
+    }
+    .overlay { position: absolute; }
+    canvas { outline: none; }
+  </style>
+</head>
+
+<body>
+
+  <div id="app">
+    <div class="overlay">
+      <div>
+        Goto:
+        <button onclick="goto('earth')">Go to the earth</button>
+        <button onclick="goto('moon')">Go to the moon</button>
+        <button onclick="goto('object')">Location 1</button>
+      </div>
+      <div>
+        Look At:
+        <button onclick="lookAt('earth')">Earth</button>
+        <button onclick="lookAt('moon')">moon</button>
+        <button onclick="lookAt('object')">Location 1</button>
+      </div>
+      <div>
+        Fly to:
+        <button onclick="flyTo('earth')">Earth</button>
+        <button onclick="flyTo('moon')">moon</button>
+        <button onclick="flyTo('object')">Location 1</button>
+      </div>
+      <div>
+        setTrackedEntity
+        <button onclick="setTrackedEntity('earth')">Earth</button>
+        <button onclick="setTrackedEntity('moon')">moon</button>
+        <button onclick="setTrackedEntity('object')">Location 1</button>
+        <button onclick="setTrackedEntity()">unset</button>
+      </div>
+      <div>
+        Controls
+        <button onclick="setFlyControls()">setFlyControls</button>( keys: A, S, D, W )
+      </div>
+    </div>
+    <div id="webgl" class='scene'></div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>
